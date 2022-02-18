@@ -9,6 +9,10 @@ $router->add('', ['controller' => 'HomeController', 'action' => 'index']);
 $router->add('auth', ['controller' => 'LoginController', 'action' => 'auth']);
 $router->add('logout', ['controller' => 'LoginController', 'action' => 'logout']);
 
+/*=== РЕГИСТРАЦИЯ ===*/
+$router->add('register', ['controller' => 'RegController', 'action' => 'index']);
+
+
 /*=== РАБОТА С РОЛЯМИ ===*/
 $router->add('roles', ['controller' => 'UserRoleController', 'action' => 'index']);
 $router->add('roles/role?{id}', ['controller' => 'UserRoleController', 'action' => 'get']);
