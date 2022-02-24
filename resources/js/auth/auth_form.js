@@ -6,7 +6,7 @@ if (buttonAuth) {
         Swal.fire({
             title: 'Войти в аккаунт',
             html:
-                '<a href="#" id="reg_link" class="register-link">или зарегистрироваться</a>' +
+                '<a href="/register" id="reg_link" class="register-link">или зарегистрироваться</a>' +
                 '<input id="phone" type="tel" class="auth-field input-selector" placeholder="Номер телефона">' +
                 '<input id="password" type="password" class="auth-field" placeholder="Пароль">',
             preConfirm: () => {
