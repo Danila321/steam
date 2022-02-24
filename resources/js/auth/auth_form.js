@@ -6,7 +6,7 @@ if (buttonAuth) {
         Swal.fire({
             title: 'Войти в аккаунт',
             html:
-                '<a href="/register" class="register-link">или зарегистрироваться</a>' +
+                '<a href="#" id="reg_link" class="register-link">или зарегистрироваться</a>' +
                 '<input id="phone" type="tel" class="auth-field input-selector" placeholder="Номер телефона">' +
                 '<input id="password" type="password" class="auth-field" placeholder="Пароль">',
             preConfirm: () => {
@@ -27,7 +27,7 @@ if (buttonAuth) {
         });
 
         new MaskInput(document.querySelector('.input-selector'), {
-            mask: '+(000)-00-00-000',
+            mask: '+(000)-000-00-00',
             alwaysShowMask: true,
             maskChar: '_',
         });

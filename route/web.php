@@ -8,10 +8,8 @@ $router->add('', ['controller' => 'HomeController', 'action' => 'index']);
 /*=== АВТОРИЗАЦИЯ, РЕГИСТРАЦИЯ, ВЫХОД ИЗ АККАУНТА ===*/
 $router->add('auth', ['controller' => 'LoginController', 'action' => 'auth']);
 $router->add('logout', ['controller' => 'LoginController', 'action' => 'logout']);
-
-/*=== РЕГИСТРАЦИЯ ===*/
-$router->add('register', ['controller' => 'RegController', 'action' => 'index']);
-
+$router->add('register', ['controller' => 'RegController', 'action' => 'show']);
+$router->add('register/store', ['controller' => 'RegController', 'action' => 'store']);
 
 /*=== РАБОТА С РОЛЯМИ ===*/
 $router->add('roles', ['controller' => 'UserRoleController', 'action' => 'index']);

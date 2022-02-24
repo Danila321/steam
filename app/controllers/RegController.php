@@ -2,16 +2,26 @@
 
 namespace App\Controller;
 
-use App\Model\CompanyModel;
-use App\Policy\CompanyPolicy;
+use App\Model\RegModel;
+use App\Service\DataBuilder;
 use Core\View;
 
 class RegController{
 
-    public function index()
+    use DataBuilder;
+
+    public function show()
     {
 
-        View::render('registration/index.php', ['companies' => $result]);
+        View::render('registration/show.php', ['companies' => $result]);
+    }
+
+    public function store() : void {
+        $_POST['password'] = md5($_POST['password']);
+        $args = $this->dataBuilder($_POST);
+
+        $new_user = new RegModel();
+        $new_user->store($args);
     }
 
 }
